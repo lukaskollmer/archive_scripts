@@ -28,7 +28,8 @@ note = note_store.getNote(guid, True, True, False, False)
 text = note.content.split('<div>')
 
 def files():
-    return [f for f in os.listdir('.') if os.path.isfile(f) and f not in os.path.basename(__file__) and '.DS_Store' not in f]
+    return [f for f in os.listdir('.') if os.path.isfile(f) and f not in os.path.basename(__file__) and '.DS_Store' not in f and '.gitignore' not in f and 'config.json' not in f]
+
 
 print('Downloading videos...')
 text.pop(0) # We remove the first element, as it is the evernote xml definition
