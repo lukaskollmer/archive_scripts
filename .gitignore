@@ -2,3 +2,5 @@
 *.mp4
 
 config.json
+
+*.pyc
